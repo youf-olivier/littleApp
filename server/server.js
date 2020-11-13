@@ -15,11 +15,11 @@ apiRoute.get('/dingdong', (req, res) => {
   const jwtHeader = req.get('Authorization');
   if (jwtHeader) {
     setTimeout(() => {
-      res.send({ message: 'Hello ! See your accees Token ', token: jwtHeader.split(" ")[1] });
+      res.send({ message: 'Hello ! See your accees Token ', token: jwtHeader.split(' ')[1] });
     }, delay);
   } else {
     res.statusCode = 401;
-    res.setHeader('WWW-Authenticate', 'Basic realm="example"');
+    res.setHeader('WWW-Authenticate', 'Bearer realm="portier"');
     res.end("Who's there ?");
   }
 });
