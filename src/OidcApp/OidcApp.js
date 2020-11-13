@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react';
+import { withAuthentication } from '@axa-fr/react-oidc-context-fetch';
 import BubbleResponse from 'shared/components/Bubble';
 import Doorbell from 'shared/components/Doorbell';
 import UserCard from 'shared/components/UserCard';
@@ -32,6 +33,6 @@ const OidcAppWithFetch = ({ fetch: injectedFetch }) => {
 };
 
 // 🎯 REPLACE DEFAULT FETCH
-const OidcApp = () => <OidcAppWithFetch fetch={fetch} />;
+const OidcApp = withAuthentication(fetch)(OidcAppWithFetch);
 
 export default OidcApp;
