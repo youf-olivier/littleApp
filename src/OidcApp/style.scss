@@ -73,7 +73,7 @@
 }
 
 .bubble-token img {
-  width: 2em;
+  width: 3em;
 }
 
 @font-face {
@@ -102,7 +102,10 @@ blockquote {
   font-family: SequentialistBB, cursive;
   font-size: 2.5vw;
   margin: 0;
-  width: 35%;
+  width: 30%;
+  & p {
+    margin-bottom: 0.2em;
+  }
   &.bubble {
     background-position: center;
     background-repeat: no-repeat !important;
