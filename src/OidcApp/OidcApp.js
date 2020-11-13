@@ -6,19 +6,13 @@ import UserCard from 'shared/components/UserCard';
 import './style.scss';
 
 import { callApi } from './service.js';
+import { useReactOidc } from '@axa-fr/react-oidc-context';
 
 const OidcAppWithFetch = ({ fetch: injectedFetch }) => {
   const [response, setResponse] = useState(null);
 
   /* 👇 CHANGES HERE 👇 */
-
-  // 🎯 SET OIDC USER
-  const oidcUser = null;
-  // 🎯  SET LOGIN FUNCTION
-  const login = () => {
-    console.log('LOGIN');
-  };
-
+  const { oidcUser, login } = useReactOidc();
   /* 👆 CHANGES HERE 👆 */
 
   const doKnockKnock = useCallback(async () => {
