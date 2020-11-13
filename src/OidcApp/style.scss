@@ -41,7 +41,7 @@
   top: 50%;
   transform: translate(50%, -50%);
 }
-
+.button-logout,
 .button-summit,
 .button-summit:focus {
   background: #44546a;
@@ -77,16 +77,14 @@
 }
 
 @font-face {
-  font-family: "SequentialistBB";
-  src: url("../shared/fonts/306FA6_1_0.woff2") format("woff2"),
-    url("../shared/fonts/306FA6_0_0.woff") format("woff");
+  font-family: 'SequentialistBB';
+  src: url('../shared/fonts/306FA6_1_0.woff2') format('woff2'), url('../shared/fonts/306FA6_0_0.woff') format('woff');
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  font-family: "SequentialistBB";
-  src: url("../shared/fonts/306FA6_0_0.woff2") format("woff2"),
-    url("../shared/fonts/306FA6_0_0.woff") format("woff");
+  font-family: 'SequentialistBB';
+  src: url('../shared/fonts/306FA6_0_0.woff2') format('woff2'), url('../shared/fonts/306FA6_0_0.woff') format('woff');
   font-style: italic;
   font-weight: 400;
 }
@@ -117,12 +115,12 @@ blockquote {
     line-height: 1;
   }
   &.speech {
-    background: url("../shared/images/speech.svg");
+    background: url('../shared/images/speech.svg');
     padding-top: 6%;
     padding-bottom: 20%;
   }
   &.electric {
-    background: url("../shared/images/electric.svg");
+    background: url('../shared/images/electric.svg');
     font-size: 2.4vw;
     font-style: italic;
     padding: 4% 6% 12% 0%;
