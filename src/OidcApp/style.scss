@@ -1,0 +1,130 @@
+.doorbell {
+  &-image {
+    fill: #44546a;
+    width: 14vh;
+    &:hover {
+      fill: #0dbbd6;
+    }
+    &:active {
+      fill: #fe6c45;
+    }
+  }
+  &-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    &:active {
+      box-shadow: 0 5px #fe6c45;
+      transform: translateY(4px);
+      cursor: grab;
+      transition: all 0.1s;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.oidc-container {
+  position: relative;
+  margin-top: 10em;
+}
+
+.ant-card-head {
+  font-size: 0.8em;
+}
+
+.button-summit {
+  left: 10%;
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.button-summit,
+.button-summit:focus {
+  background: #44546a;
+  border-color: #333;
+  &:hover {
+    background: #0dbbd6;
+  }
+  &:active {
+    background: #0dbbd6;
+    border-color: #333;
+  }
+}
+
+.user {
+  &-card {
+    font-size: 2em;
+    left: 5%;
+    position: absolute;
+    width: 35%;
+    top: -50%;
+  }
+  &-token img {
+    width: 10em;
+  }
+  &-avatar {
+    width: 6em;
+    padding-bottom: 2em;
+  }
+}
+
+@font-face {
+  font-family: 'SequentialistBB';
+  src: url('../shared/fonts/306FA6_1_0.woff2') format('woff2'),
+    url('../shared/fonts/306FA6_0_0.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SequentialistBB';
+  src: url('../shared/fonts/306FA6_0_0.woff2') format('woff2'),
+    url('../shared/fonts/306FA6_0_0.woff') format('woff');
+  font-style: italic;
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+}
+
+blockquote {
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 0;
+  font-family: SequentialistBB, cursive;
+  font-size: 2.5vw;
+  margin: 0;
+  width: 35%;
+  &.bubble {
+    background-position: center;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    text-align: center;
+    height: 0;
+    box-sizing: content-box;
+    line-height: 1;
+  }
+  &.speech {
+    background: url('../shared/images/speech.svg');
+    width: 25%;
+    padding-top: 6%;
+    padding-bottom: 20%;
+  }
+  &.electric {
+    background: url('../shared/images/electric.svg');
+    width: 25%;
+    font-size: 2.4vw;
+    font-style: italic;
+    padding: 4% 6% 12% 0%;
+    span {
+      display: block;
+      font-size: 3vw;
+      font-weight: bold;
+    }
+  }
+}
