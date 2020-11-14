@@ -1,8 +1,8 @@
-import './App.css';
 import 'antd/dist/antd.css';
+import './App.css';
 
 // 🎯 IMPORT CONFIG & REACT OIDC
-import { AuthenticationProvider } from '@axa-fr/react-oidc-context';
+import { AuthenticationProvider, OidcSecure } from '@axa-fr/react-oidc-context';
 import configurations from './configurations.json';
 
 import Header from 'shared/components/Header';
@@ -13,8 +13,10 @@ function App() {
     <div className="App">
       {/* 🎯 CONFIGURE OIDC PROVIDER */}
       <AuthenticationProvider configuration={configurations.auth0}>
-        <Header />
-        <OidcApp />
+        <OidcSecure>
+          <Header />
+          <OidcApp />
+        </OidcSecure>
       </AuthenticationProvider>
     </div>
   );

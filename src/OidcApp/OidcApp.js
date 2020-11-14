@@ -13,7 +13,7 @@ const OidcAppWithFetch = ({ fetch: injectedFetch }) => {
   const [response, setResponse] = useState(null);
 
   /* 👇 CHANGES HERE 👇 */
-  const { oidcUser, login } = useReactOidc();
+  const { oidcUser, login, logout } = useReactOidc();
   /* 👆 CHANGES HERE 👆 */
 
   const doKnockKnock = useCallback(async () => {
@@ -23,7 +23,7 @@ const OidcAppWithFetch = ({ fetch: injectedFetch }) => {
 
   return (
     <div className="oidc-container">
-      <UserCard user={oidcUser} onLogin={login} />
+      <UserCard user={oidcUser} onLogin={login} onLogout={logout} />
       <button className="doorbell-button" onClick={doKnockKnock}>
         <Doorbell />
       </button>
