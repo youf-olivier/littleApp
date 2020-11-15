@@ -7,7 +7,7 @@ import './style.scss';
 
 import { callApi } from './service.js';
 
-const OidcAppWithFetch = ({ injectedFetch }) => {
+const OidcAppWithFetch = ({ fetch: injectedFetch }) => {
   const [response, setResponse] = useState(null);
 
   /* 👇 CHANGES HERE 👇 */
@@ -38,6 +38,6 @@ const OidcAppWithFetch = ({ injectedFetch }) => {
 };
 
 // 🎯 REPLACE DEFAULT FETCH
-const OidcApp = () => <OidcAppWithFetch injectedFetch={fetch} />;
+const OidcApp = () => <OidcAppWithFetch fetch={fetch} />;
 
 export default OidcApp;
