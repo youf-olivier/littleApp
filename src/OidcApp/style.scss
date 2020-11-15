@@ -1,7 +1,7 @@
 .doorbell {
   &-image {
     fill: #44546a;
-    width: 14vh;
+    width: 8vh;
     &:hover {
       fill: #0dbbd6;
     }
@@ -57,14 +57,13 @@
 
 .user {
   &-card {
-    font-size: 1.4em;
     left: 5%;
     position: absolute;
     width: 35%;
     top: -50%;
   }
   &-token img {
-    width: 7em;
+    width: 4em;
   }
   &-avatar {
     width: 6em;
